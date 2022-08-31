@@ -1,1 +1,1 @@
-task 1
+changes the working directory to the user’s home directory.
