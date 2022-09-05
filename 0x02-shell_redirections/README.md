@@ -1,2 +1,2 @@
-0. Script that prints "Hello, World"
+0. A script that prints "Hello, World"
 
