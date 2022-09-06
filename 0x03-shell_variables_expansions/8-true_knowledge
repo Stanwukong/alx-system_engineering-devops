@@ -1,2 +1,2 @@
 #!/bin/bash
- $(($TRUEKOWLEDGE+128)) \n
+echo $(($TRUEKOWLEDGE+128)) \n
