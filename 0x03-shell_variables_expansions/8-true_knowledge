@@ -1,0 +1,2 @@
+#!/bin/bash
+ $(($TRUEKOWLEDGE+128)) \n
