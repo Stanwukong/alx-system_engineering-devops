@@ -10,3 +10,6 @@ This project took me on an introductory crash course in the Shell. I learned how
 - **_1. What's in there?_**
 	- [1-listit](./1-listit): Bash script that displays the content list of the current directory.
 
+- **_2. There is no place like home_**
+	- [2-bring_me_home](./2-bring_me_home): Bash script that changes the working directory to the user's home directory.
+
