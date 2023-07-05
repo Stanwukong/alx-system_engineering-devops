@@ -11,5 +11,36 @@ This project took me on an introductory crash course in the Shell. I learned how
 	- [1-listit](./1-listit): Bash script that displays the content list of the current directory.
 
 - **_2. There is no place like home_**
-	- [2-bring_me_home](./2-bring_me_home): Bash script that changes the working directory to the user's home directory.
+	- [2-bring_me_home](./2-bring_me_home): Bash script that changes the working directory to the user's home directory:wq
+.
 
+- **_3. The long format_**
+	- [3-listfiles](./3-listfiles): Bash script that displays current directory contents in a long format.
+
+- **_4. Hidden files_**
+	- [4-listmorefiles](./4-listmorefiles): Bash script that displays current directory contents, including hidden files (starting with `.`) in a long format.
+
+- **_5. I love numbers_**
+	- [5-listfilesdigitonly](./5-listfilesdigitonly): Bash script that displays current directory contents
+		- Long format
+		- User and group IDs displayed numerically
+		- Hidden files 
+
+- **_6. Welcome_**
+	- [6-firstdirectory](./6-firstdirectory): script that creates a directory named `my_first_directory` in the /tmp/ directory.
+
+- **_7. Betty in my first directory_**
+	- [7-movethatfile](./7-movethatfile): script that moves the file betty from `/tmp/` to `/tmp/my_first_directory`.
+
+- **_8. Bye bye Betty_**
+	- [8-firstdelete](./8-firstdelete): script that deletes the file `betty`.
+		- The file `betty` is in `/tmp/my_first_directory`.
+
+- **_9. Bye bye My first Directory_**
+	- [9-firstdirdeletion](./9-firstdirdeletion): script that deletes the directory `my_first_directory` that is in `/tmp` directory.
+
+- **_10. Back to the future_**
+	- [10-back](./10-back): script that changes the working directory to the previous one.
+
+- **_11. Lists_**
+	- [11-lists](./11-lists): script that lists all files (even ones with names beginning with a period character, which are normally hidden) in the current directory and the parent of the working directory and the `/boot` directory (in this order), in long format
