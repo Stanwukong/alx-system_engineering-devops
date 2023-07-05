@@ -7,3 +7,6 @@ This project took me on an introductory crash course in the Shell. I learned how
 - **_0. Where am I?_**
 	- [0-current_working_directory](./0-current_working_directory): Bash script that prints the absolute pathname of the current working directory.
 
+- **_1. What's in there?_**
+	- [1-listit](./1-listit): Bash script that displays the content list of the current directory.
+
