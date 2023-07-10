@@ -44,3 +44,22 @@ In this project, I learned about Linux file permissions and how to use commands:
 
 - **_11. Directories_**
 	- [11-directories_permissions](./11-directories_permissions): script that adds execute permission to all subdirectories of the **current directory** for the owner, the group owner and all other users.
+
+- **_12. More directories_**
+	- [12-directory_permissions](./12-directory_permissions): script that creates a directory called `my_dir` with permissions 751 in the working directory.
+
+- **_13. Change group_**
+	- [13-change_group](./13-change_group): script that changes group owner to `school` for the file `hello`
+
+- **_14. Owner and group_**
+	- [100-change_owner_and_group](./100-change_owner_and_group): script that changes the owner to `vincent` and the group owner to `staff` for all the files and directories in the working directory.
+
+- **_15. Symbolic links_**
+	- [101-symbolic_link_permissions](./101-symbolic_link_permissions): script that changes the owner and the group owner of `_hello` to `vincent` and `staff` respectively.
+		- The file `_hello` is a symbolic link
+
+- **_16. If only_**
+	- [102-if_only](./102-if_only): script that changes the owner of the file `hello` to `betty` only if it is owned by the user `guillaume`.
+
+- **_17. Star Wars_**
+	- [103-Star_Wars](./103-Star_Wars): script that plays the Star Wars IV episode in the terminal.
