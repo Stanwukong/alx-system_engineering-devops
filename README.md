@@ -3,4 +3,4 @@
 This repository contains programs I've written for the system engineering and DevOps track at ALX SE. In these projects, I worked with Bash and practiced writing bash scripts to automate tasks. The specific list of projects is as follows:
 
 - [0x00. Shell, basics](./0x00-shell_basics)
-- [0x01.Shell, permissions](./0x00-shell_permissions)
+- [0x01.Shell, permissions](./0x01-shell_permissions)
