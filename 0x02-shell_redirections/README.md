@@ -63,6 +63,68 @@
 
 - **_12. What’s new_**
 	- [12-newest_files](./12-newest_files): Bash script that displays the 10 newest files in the current directory.
-	Requirements:
 		- One file per line
-		- Sorted from newest to the oldest
+		- Sorted from newest to the oldest.
+
+- **_13. Being unique is better than being perfect_**
+	- [13-unique](./13-unique): Bash script that takes a list of words as input and prints only words that appear exactly once.
+		- Input format: One line, one word
+		- Output format: One line, one word
+		- Words should be sorted
+
+- **_14. It must be in that file_**
+	- [14-findthatword](./14-findthatword): Bash script that displays lines containing the pattern "root" from the file `/etc/passwd`.
+
+- **_15. Count that word_**
+	- [15-countthatword](./15-countthatword): Bash script that displays the number of lines that contain the pattern "bin" in the file `/etc/passwd`.
+
+- **_16. What's next?_**
+	- [16-whatsnext](./16-whatsnext): Bash script that displays lines containing the pattern "root" and 3 lines after them in the file `/etc/paswd`.
+
+- **_17. I hate bins_**
+	- [17-hidethisword](./17-hidethisword): Bash script that displays all the lines in the file `/etc/passwd` that do not contain the pattern “bin”.
+
+- **_18. Letters only please_**
+	- [18-letteronly](./18-letteronly): Bash script that displays all lines of the file `/etc/ssh/sshd_config` starting with a letter.
+		- Include capital letters as well
+
+- **_19. A to Z_**
+	- [19-AZ](./19-AZ): Bash script that replaces all characters `A` and `C` from input to `z` and `e` respectively.
+
+- **_20. Without C, you would live in hiago_**
+	- [20-hiago](./20-hiago): Bash script that removes all letters `c` and `C` from input.
+
+- **_21. esreveR_**
+	- [21-reverse](./21-reverse): Bash script that reverses its input.
+
+- **_22. DJ Cut Killer_**
+	- [22-users_and_homes](./22-users_and_homes): Bash script that displays all users and their home directories, sorted bu users.
+		- Based on the `/etc/passwd` file
+
+- **_23. Empty casks make the most noise_**
+	- [100-empty_casks](./100-empty_casks): Bash script that finds all empty files and directories in the current directory and all sub-directories.
+		- Only the names of the files and directories should be displayed (not the entire path)
+		- Hidden files should be listed
+		- One file name per line
+		- The listing should end with a new line
+		- You are not allowed to use `basename`, `grep`, `egrep`, `fgrep` or `rgrep`
+
+- **_24. A gif is worth ten thousand words_**
+	- [101-gifs](./101-gifs): Bash script that lists all the files with a `.gif` extension in the current directory and all its sub-directories.
+		- Hidden files should be listed
+		- Only regular files (not directories) should be listed
+		- The names of the files should be displayed without their extensions
+		- The files should be sorted by byte values, but case-insensitive (file `aaa` should be listed before file `bbb`, file `.b` should be listed before file `a`, and file `Rona` should be listed after file `jay`)
+		- One file name per line
+		- The listing should end with a new line
+		- You are not allowed to use `basename`, `grep`, `egrep`, `fgrep` or `rgrep`
+
+- **_25. Acrostic_**
+	- [102-acrostic](./102-acrostic): Bash script that decodes acrostics that use the first letter of each line.
+		- The ‘decoded’ message has to end with a new line
+		- You are not allowed to use `grep`, `egrep`, `fgrep` or `rgrep`
+
+- **_26. The biggest fan_**
+	- [103-the_biggest_fan](./103-the_biggest_fan): Bash script that parses web servers logs in TSV format as input and displays the 11 hosts or IP addresses which did the most requests.
+		- Order by number of requests, most active host or IP at the top
+		- You are not allowed to use `grep`, `egrep`, `fgrep` or `rgrep`
