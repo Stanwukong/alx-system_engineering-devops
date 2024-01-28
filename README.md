@@ -12,6 +12,7 @@ This repository contains programs I've written for the system engineering and De
 - [0x08. Networking basics #1](./0x08-networking_basics_2)
 - [0x0A. Configuration management](./0x0A-configuration_management)
 - [0x0B. SSH](./0x0B-ssh)
+- [Attack is the best defense](./attack_is_the_best_defense)
 
 ## Author :black_nib:
 
