@@ -34,14 +34,14 @@ defaults
   timeout server 15s
   timeout http-request 10s
 
-frontend femi-dev
+frontend femiajanaku-tech-frontend
     bind *:80
-    default_backend femi-dev
+    default_backend femiajanaku-tech-backend
 
-backend femi-dev
+backend femiajanaku-tech-backend
     balance roundrobin
-    server 116262-web-01 54.160.88.253:80 check
-    server 116262-web-02 34.207.253.31:80 check
+    server 116262-web-01 54.210.50.195:80 check
+    server 116262-web-02 54.237.62.211:80 check
 "
 
 # shellcheck disable=SC2154
