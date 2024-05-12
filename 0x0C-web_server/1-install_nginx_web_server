@@ -4,7 +4,31 @@
 #+	Install nginx on web-01 server.
 #+	Nginx should be listening on port 80.
 
-sudo apt-get -y update
+
+# Install/update Nginx
+echo -e "Updating package lists..\n"
+sudo apt-get -y update -qq
+
+echo -e "Installing Nginx.. \n"
 sudo apt-get -y install nginx
-echo 'Hello World!' > /var/www/html/index.nginx-debian.html
+
+# Start Nginx service
 sudo service nginx start
+
+# Allows nginx on firewall
+sudo ufw allow "Nginx HTTP"
+
+# Change site file ownership and permissions to user for editing
+sudo chown -R "$USER":"$USER" /var/www/html
+sudo chown -R 755 /var/www
+
+# Backup default index
+cp /var/www/html/index.nginx-debian.html /var/www/html/index.nginx-debian.html.bckp
+
+# Create new index
+echo -e "Hello World!" | dd status=none of=/var/www/html/index.nginx-debian.html
+
+# Restart Nginx
+sudo service nginx restart
+
+echo -e "\nCompleted. ✅\n"

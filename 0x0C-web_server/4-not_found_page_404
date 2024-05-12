@@ -1,35 +1,41 @@
 #!/usr/bin/env bash
-# Installs Nginx with the following configurations:
-#+    Listens on port 80.
-#+    Returns a page containing "Holberton School" when queried
-#+     at the root with a curl GET request.
-# Configures /redirect_me as a "301 Moved Permanently".
-# Includes a custom 404 page containing "Ceci n'est pas une page".
+# Install Nginx web server
+# Requirements:
+#+	Install nginx on web-01 server.
+#+	Nginx should be listening on port 80.
 
-apt-get update
-apt-get install -y nginx
 
-mkdir /etc/nginx/html
-touch /etc/nginx/html/index.html
-echo "Holberton School" > /etc/nginx/html/index.html
-touch /etc/nginx/html/404.html
-echo "Ceci n'est pas une page" > /etc/nginx/html/404.html
+# Install/update Nginx
+echo -e "Updating package lists..\n"
+sudo apt-get -y update -qq
 
-printf %s "server {
-    listen 80;
-    listen [::]:80 default_server;
-    root   /etc/nginx/html;
-    index  index.html index.htm;
+echo -e "Installing Nginx.. \n"
+sudo apt-get -y install nginx
 
-    location /redirect_me {
-        return 301 http://cuberule.com/;
-    }
+# Start Nginx service
+sudo service nginx start
 
-    error_page 404 /404.html;
-    location /404 {
-      root /etc/nginx/html;
-      internal;
-    }
-}" > /etc/nginx/sites-available/default
+# Allows nginx on firewall
+sudo ufw allow "Nginx HTTP"
 
-service nginx restart
+# Change site file ownership and permissions to user for editing
+sudo chown -R "$USER":"$USER" /var/www/html
+sudo chown -R 755 /var/www
+
+# Backup default index
+cp /var/www/html/index.nginx-debian.html /var/www/html/index.nginx-debian.html.bckp
+
+# Create new index
+echo -e "Hello World!" | dd status=none of=/var/www/html/index.nginx-debian.html
+
+# Setting up /redirect_me to my portfolio website
+sudo sed -i '24i\    rewrite ^/redirect_me https://femiajanaku.vercel.app permanent;' /etc/nginx/sites-available/default
+
+# Set up 404 page
+echo "Ceci n'est pas une page" >> /var/www/html/error_404.html
+sudo sed -i '25i\    error_page 404 /error_404.html;' /etc/nginx/sites-available/default
+
+# Restart Nginx
+sudo service nginx restart
+
+echo -e "\nCompleted. ✅\n"
