@@ -1,4 +1,6 @@
 # ssh config file
-Host *
-      PasswordAuthentication no
-      IdentifyFile ~/.ssh/school
+Host web-01
+    HostName 35.174.184.110
+    User Femi
+    IdentityFile ~/.ssh/school
+    PasswordAuthentication no
