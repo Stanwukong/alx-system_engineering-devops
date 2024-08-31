@@ -1,6 +1,6 @@
 # ssh config file
 Host web-01
-    HostName 35.174.184.110
-    User Femi
-    IdentityFile ~/.ssh/school
-    PasswordAuthentication no
+	HostName 35.174.184.110
+	User ubuntu
+	IdentityFile ~/.ssh/school
+	PasswordAuthentication no
